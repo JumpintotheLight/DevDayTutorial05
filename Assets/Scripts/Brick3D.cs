@@ -9,6 +9,7 @@ public class Brick3D : MonoBehaviour {
     private int timesHits;
     public static int breakableCount = 0;
     private bool isBreakable;
+    public Material brokenmaterial;
 
     // Use this for initialization
     void Start () {
@@ -54,7 +55,10 @@ public class Brick3D : MonoBehaviour {
     }
     void LoadSprites() {
 
-
+        if(brokenmaterial != null)
+        {
+            this.gameObject.GetComponent<Renderer>().material = brokenmaterial;
+        }
         // FIXME
         /*
         int spriteIndex = timesHits - 1;

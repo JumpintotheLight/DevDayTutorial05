@@ -12,6 +12,7 @@ public class Ball3D : MonoBehaviour{
 
 
     public bool triggerButtonDown = false;
+    private bool hasStarted = false;
 
 
     /*
@@ -31,10 +32,9 @@ public class Ball3D : MonoBehaviour{
 
 
 
-    private bool hasStarted = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         paddle = GameObject.FindObjectOfType<Paddle3D>();
         if(paddle !=null)
         {
@@ -74,6 +74,7 @@ public class Ball3D : MonoBehaviour{
 
             }
             */
+            
 
             triggerButtonDown = ViveInput.GetPressDown(HandRole.RightHand, ControllerButton.Trigger);
 
